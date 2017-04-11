@@ -1,0 +1,60 @@
+	
+Zobacz podsumowanie
+#include <stdio.h>
+#include <stdlib.h>
+#define ROZMIAR 30
+struct dane
+{
+    char imie[ROZMIAR];
+    char nazwisko[ROZMIAR];
+    int data;
+};
+struct lista
+{
+  struct dane osoba;
+  struct lista *next;  
+};
+void dodaj(struct lista* head, char c)
+{
+    struct lista* nowa;
+    nowa=malloc(sizeof(struct lista));
+    
+    printf("Podaj imie")
+    fgets(osoba->imie, r, stdin);
+    printf("Podaj nazwisko")
+    fgets(osoba->nazwisko, r, stdin);
+    pritnf("Podaj rok");
+    scanf("%d", &(osoba->rok));
+    next=head;
+    return nowa;
+}
+
+
+void wypisz(struct lista* head)
+{
+    struct lista* wsk;
+    for(wsk=head; wsk!=null; wsk=wsk->next)
+        puts(wsk->osoba.imie);
+        puts(wsk->osoba.nazwisko);
+        printf("%d", osoba.rok);
+}
+void usun(struct lista *head)
+{
+    struct lista *p;
+    p=head;
+    if(p!=NULL)
+    {
+        head= p->next;
+        free(p);
+    }else{
+    return 0;}
+}
+struct lista *szukaj(struct lista* head);
+{
+    int x;
+    struct lista *p;
+    printf("Podaj rok");
+    scanf("%d", &x);
+    for (p=head; p!=NULL; p=p->next)
+        if ()
+}
