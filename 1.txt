@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-int main()int main(char argv,char args[])
+int main()
 {
     int i, space, rows, k=0, count = 0, count1 = 0;
 
