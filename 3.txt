@@ -1,0 +1,41 @@
+	
+Zobacz podsumowanie
+#include <stdio.h>
+#include <stdlib.h>
+
+int* tablica(int rozmiar);
+int main()
+{
+    int r;
+    int j, *tab;
+    printf("Podaj rozmiar tablicy\n");
+    scanf ("%d", &r);
+
+   tab = tablica(r);
+   if (tablica(r)==NULL)
+   {
+       printf("b³ad");
+       return 1;
+   }else{
+   for (j=0; j<r; j++)
+    printf("%d\n", tab[j] );
+   }
+    free(tab);
+    return 0;
+}
+
+int* tablica(int rozmiar)
+{
+    int i;
+    int *tablica1;
+    tablica1= (int*) malloc (rozmiar * sizeof(*tablica1));
+    if (tablica1==NULL)
+    {
+        return NULL;
+    }else{
+    for (i=0; i<rozmiar; i++)
+     tablica1[i]=2*i+1;
+
+    }
+    return tablica1;
+}
