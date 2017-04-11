@@ -1,5 +1,4 @@
-	
-Zobacz podsumowanie
+
 #include <stdio.h>
 #include <stdlib.h>
 #define ROZMIAR 30
