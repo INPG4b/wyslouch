@@ -1,0 +1,34 @@
+void copyMatrix(int*** pdest, int** src, int n)
+{
+    int **dest;
+    int i,j;
+    dest=createMatrix(n);
+
+    for(i=0;i<n;i++)
+        {
+            for(j=0;j<n;j++)
+            {
+             dest[i][j]=src[i][j];
+            }
+
+        }
+    pdest=&dest;
+}
+int main()
+{
+    int rozmiar=4;
+    int **tablica;
+    int **tablica2;
+    int ***kopia;
+    int i,j;
+
+    tablica=createMatrix(rozmiar);
+    fillMatrix(tablica, rozmiar);
+    copyMatrix(kopia, tablica, rozmiar);
+    for(i=0; i<rozmiar; i++)
+        for(j=0; j<rozmiar; j++)
+        printf ("%d", tab[i][j]);
+    deleteMatrix(tablica);
+    return 0;
+
+}
