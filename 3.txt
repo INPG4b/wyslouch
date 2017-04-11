@@ -1,5 +1,5 @@
 	
-Zobacz podsumowanie
+
 #include <stdio.h>
 #include <stdlib.h>
 
