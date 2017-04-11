@@ -1,0 +1,60 @@
+	
+Zobacz podsumowanie
+#include <stdio.h>
+#include <math.h>
+
+struct zespolone
+{
+    double re;
+    double im;
+};
+struct zespolone dodawanie (struct zespolone pierwsza,struct zespolone druga)
+{
+    struct zespolone wynik;
+    wynik.re=pierwsza.re+druga.re;
+    wynik.im=pierwsza.im+druga.im;
+    return wynik;
+}
+double modul (struct zespolone pierwsza)
+{
+    double  wynik;
+    double kwadrat;
+    kwadrat=pierwsza.re*pierwsza.re+pierwsza.im*pierwsza.im;
+    wynik=sqrt(kwadrat);
+
+    return wynik;
+}
+struct zespolone sprzezona (struct zespolone pierwsza )
+{
+    struct zespolone wynik;
+    wynik.re=pierwsza.re;
+    wynik.im=(-1)*pierwsza.im;
+    return wynik;
+}
+int main()
+{
+    struct zespolone pierwsza, druga, wynik;
+    int wybor;
+    double x1,x2,y1,y2, wynik1;
+    printf ("Wybierz 1 jeœli chcesz dodaæ dwie liczby zespolone, 2 jeœli chcesz uzyskaæ modu³ liczby zepolonej, 3 jeœli chcesz otrzymaæ sprzê¿enie liczby zespolonej\n");
+    scanf ("%d", &wybor);
+    if (wybor==1)
+    {
+        printf ("Podaj czêœæ rzeczywist¹ i urojona pierwszej liczby");
+        scanf ("%lf %lf",&x1, &y1);
+        printf ("Podaj czêœæ rzeczywist¹ i urojona drugiej liczby");
+        scanf ("%lf %lf",&x2, &y2);
+        pierwsza.re=x1;
+        pierwsza.im=y1;
+        druga.re=x2;
+        druga.im=y2;
+        wynik=dodawanie(pierwsza, druga);
+
+        printf ("%lf+%lf", wynik.re,wynik.im);
+    }else{
+        if(wybor==2)
+        {
+
+        }
+    }
+}
