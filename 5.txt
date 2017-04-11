@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,k;
+    printf ("Podaj n\n");
+    scanf ("%d", &n);
+    printf ("Podaj k\n");
+    scanf ("%d", &k);
+
+    if (k>0 && n>k)
+    {
+        printf("Wynik to %d\n", newton(n,k));
+    }
+    else
+    {
+        printf("n musi byc wiêksze od k a k wieksze od 0\n");
+    }
+    return 0;
+}
+
+int newton(n,k)
+{
+    if (k==0 || k==n)
+        return 1;
+    else
+        {
+         return newton(n-1,k-1)+newton(n-1,k);
+        }
+    return 0;
+}
