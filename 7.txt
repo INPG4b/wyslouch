@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+ int** createMatrix(int n)
+{
+    int i;
+    int **matrix;
+    matrix=malloc(n*sizeof(matrix));
+    if(matrix==NULL)
+    {
+        return NULL;
+    }
+    else
+    {
+        for(i=0; i<n; i++)
+        {
+            matrix[i]=malloc(n*sizeof(int));
+            if(matrix[i]==NULL)
+            {
+                deleteMatrix (&matrix,i);
+                return NULL;
+            }
+        }
+
+    }
+
+    return matrix;
+}
+void deleteMatrix(int*** ptab, int n)
+{
+    int i;
+    int **macierz;
+    macierz=*ptab;
+
+    for(i=0; i<n; i++)
+    {
+         free (macierz[i]);
+        macierz[i]=NULL;
+    }
+    free (macierz);
+    *ptab=NULL;
+}
+
+void fillMatrix(int** tab, int n)
+{
+    int i, j;
+    int liczba;
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            tab[i][j]=liczba;
+            liczba++;
+        }
+    }
+}
