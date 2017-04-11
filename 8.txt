@@ -1,18 +1,18 @@
 void copyMatrix(int*** pdest, int** src, int n)
 {
-    int **dest;
+    int **desst;
     int i,j;
-    dest=createMatrix(n);
+    desst=createMatrix(n);
 
     for(i=0;i<n;i++)
         {
             for(j=0;j<n;j++)
             {
-             dest[i][j]=src[i][j];
+             desst[i][j]=src[i][j];
             }
 
         }
-    pdest=&dest;
+    pdest=&desst;
 }
 int main()
 {
