@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int* add(int* tab, int n, int new_elem);
+{
+    int * wynik;
+    int i;
+ pomoc = malloc(n * sizeof(int));
+ 
+ if (wynik==NULL)
+    {
+        return NULL;
+    }else
+    {
+        for(i=0; i<n; i++)
+            wynik[i]=tab[i];
+    }
+    tab= malloc((n+1)*sizeof(int)); 
+ if(tab==NULL) 
+ {
+  
+  return NULL;
+ }
+ else   
+ {
+ 
+  for(i=0; i<n; i++)
+  {
+   tab[i]= wynik[i];  
+  }
+  tab[n]=new_elem; 
+ }
+ free(pomoc);
+ return tab;
+}
+int main()
+{
+    int el, i;
+    int *wsk;
+    for (i=0; i<10; i++)
+    {
+        printf("Wprowadz elementy tablicy");
+        scanf("%d", &el);
+        wsk=add(wsk, i, el );
+    }
+    for (i=0; i<10; i++)
+        printf("%d", wsk[i];)
+    
+    free(wsk);
+    return 0;
+}
