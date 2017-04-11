@@ -1,5 +1,5 @@
 Const
-numbers = 6; // iloœæ sortowanych komórek w tablicy
+numbers = 6; //
 
 Type
 table = Array[1..numbers] Of Integer;
