@@ -1,0 +1,29 @@
+Const
+numbers = 6; // iloœæ sortowanych komórek w tablicy
+
+Type
+table = Array[1..numbers] Of Integer;
+
+Var
+counter : Integer;
+liczby : table;
+
+Procedure bubble_sort();
+
+  Var
+  check, memory, run : Integer; // iloœæ sprawdzeñ w przebiegu, komórka pamiêci, iloœæ przebiegów
+
+  Begin
+    For run := 1 To numbers - 1 Do
+      Begin
+      check := numbers - run;
+	For counter := 1 To check Do
+	  If liczby[counter] > liczby[counter + 1]
+	  Then
+	    Begin
+	    memory := liczby[counter];
+	    liczby[counter] := liczby [counter + 1];
+	    liczby[counter + 1] := memory;
+	    End;
+      End;
+  End;
